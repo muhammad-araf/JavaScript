@@ -5,3 +5,7 @@ for(i of arr){
     console.log(i);
 }
 // console.log(arr2)
+
+arr.forEach( (item) =>{
+    console.log(item);
+}  )
