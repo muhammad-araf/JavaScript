@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body style="background-color: #121212; color: white;">
+    <div class="parent">
+        <div id="day">Monday</div>
+        <div id="day">Tuesday</div>
+        <div id="day">Webnesday</div>
+        <div id="day">Thursday</div>
+        <div id="day">Friday</div>
+    </div>
+</body>
+<script>
+    const parent = document.getElementsByClassName('parent');
+    const ConvertedArray = Array.from(parent);
+    // ConvertedArray.forEach((l) => (console.log(l.innerText)))
+    const day01 = document.querySelector('#day');
+    // console.log(day01.innerText);
+    console.log(day01.parentElement);
+</script>
+</html>
