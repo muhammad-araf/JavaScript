@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Create Remove Edit Element with JS</title>
+</head>
+<body style="background-color: #212121; color: white">
+    <ul class = "Language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    //Add
+    function Addlang(langName){
+    const li = document.createElement('li');
+    li.innerText = `${langName}`;
+    document.querySelector('.Language').append(li);
+    }
+    Addlang("python");
+    Addlang("TypeScript");
+
+    //Edit 1st method
+    const li = document.querySelector("li:nth-child(3)");
+    li.innerText = "Araf";
+    //Edit 2nd Method
+    const newli = document.createElement('li')
+    newli.innerText= "Lento"
+    li.replaceWith(newli)
+
+    //remove
+    // const lastlang = document.querySelector('li:last-child');
+    // lastlang.remove();
+    document.querySelector('li:last-child').remove();
+</script>
+</html>
