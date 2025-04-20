@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: white;
+            align-items: center;
+            text-align: center;
+        }
+        .div{
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            margin: auto;
+            width: 20%;
+        }
+        #height,#weight{
+            margin: 10px;
+            height: 20px;
+            width: 80%;
+            border-radius: 5px;
+            background-color: #ffffff;
+            color: green;
+            border-color: rgb(255, 51, 0);
+            border:1px solid;
+            
+        }
+        button{
+            padding: 6px;
+            font-size: 10px;
+            border-radius: 7px;
+            margin-top: 7px;
+            background-color: rgb(159, 251, 154);
+            border: none;
+        }
+        button:hover{
+            background-color: rgb(77, 146, 74);
+        }
+        .result{
+            padding: 10px;
+            color:rgb(99, 255, 99);
+            background-color: #2c2b2b;
+            border-radius: 15px;
+            font-size: 20px;
+            margin: auto;
+            margin-top: 15px;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>BMI Calculator</h2>
+        <div class="div">
+            <input type="text" id="height" placeholder="height">
+            <br>
+            <input type="text" id="weight" placeholder="weight">
+        </div>
+        <button>Calculate</button>
+        <p>Result: </p>
+        <div class="result"></div>
+        
+        
+    </form>
+    
+</body>
+ <script src="script.js"></script>
+</html>
