@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <style>
+        body{
+            margin: 0;
+            height: 80vh;
+            background-color: #212121;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            text-align: center;
+            padding: 10px 100px 30px 100px;
+            background-color: rgb(142, 255, 142);
+            border-radius: 15px;
+        }
+        .InputGuess{
+            margin-top: 1px;
+            margin-bottom: 10px;
+            padding: 4px;
+            width: 80%;
+            border: 1px solid;
+            border-radius: 6px;
+            background-color: rgb(231, 255, 228);
+        }
+        .sbt{
+            padding: 4px 10px;
+            font-size: 10px;
+            color: rgb(3, 108, 3);
+            border: 1px solid;
+            border-radius: 4px;
+            background-color: rgb(231, 255, 228);
+        }
+        .sbt:hover{
+            background-color: rgb(204, 253, 198);
+        }
+        p{
+            color: rgb(255, 149, 0);
+            margin-left: 17%;
+        }
+        .result{
+            color:rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container">
+            <h1>Guess A Number</h1>
+            <input type="text" class="InputGuess" id="InputGuess0" placeholder="Enter Guess Number">
+            <br>
+            <input type="submit" class="sbt">
+            <div class="prop">
+                <p>Previous Guess: <span class="prevguess"></span></p>
+                <p>Remaining Guess: <span class="remguess"></span></p>
+                <p>Result: <span class="result"></span></p>
+            </div>
+        </div>
+        <p>Try and guess a random number between 1 to 100</p>
+        <p>You Have 10 Attempts to guess the right number</p>
+    </form>
+    
+</body>
+    <script src="script.js"></script>
+</html>
