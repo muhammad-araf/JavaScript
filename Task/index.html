@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Interval</title>
+</head>
+<body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const wait = function(){
+        console.log("hello world");
+    }
+    let changeMe;
+    document.getElementById('start').addEventListener('click',function(){
+        console.log('Start');
+        changeMe = setInterval(wait,700);
+    })
+    document.getElementById('stop').addEventListener('click',function(){
+        clearInterval(changeMe);
+        console.log('Stop');
+    })
+</script>
+</html>
