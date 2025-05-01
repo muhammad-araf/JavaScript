@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+    <style>
+        body{
+            background-color: #000000;
+        }
+        #div{
+            background-color: #212121;
+            color: white;
+            padding: 2% 10%;
+
+            border-radius: 10px;
+            border: 3px solid rgb(92, 92, 92);
+            margin: 1% 10%;
+            
+        }
+        .img{
+            
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+    </div>
+</body>
+<script>
+    const div = document.querySelector('#div');
+    const name = document.querySelector('.name');
+    const requestUrl = "https://api.github.com/users/muhammad-araf";
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl);
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            div.innerHTML = `
+            <h1>Github Public Profile</h1>
+            <div class = "child"> <img class = "img" src="/Advance01/image.png"  width="200" height="200"></div>
+            <h2> Name : ${data.name}</h2>
+            <h3>followers : ${data.followers}</h3>
+            <h3>following : ${data.following}</h3>
+            <h4>bio : ${data.bio}</h3>
+            `;
+        }
+    }
+    xhr.onreadystatechange;
+    xhr.send();
+
+</script>
+</html>
