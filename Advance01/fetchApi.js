@@ -1,0 +1,10 @@
+fetch('https://api.github.com/users/muhammad-araf')
+.then((res)=>{
+    return(res.json());
+})
+.then((res)=>{
+    console.log(res.login);
+})
+.catch((err)=>{
+    console.log("ancnaca");
+})
