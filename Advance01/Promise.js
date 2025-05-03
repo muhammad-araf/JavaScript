@@ -9,22 +9,33 @@
 //     console.log("Error with",err);
 // })
 
-let promise = new Promise((resolve,reject)=>{
+function getdata(dataId)
+{
+    return new Promise((resolve,reject)=>{
     setTimeout(()=>{
-        console.log("Data1 get");
-        resolve("success2");
-    },4000);
+        resolve();
+        console.log("Data",dataId," get");
+    },3000);
 });
-let promise2 = new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        console.log("Data2 get");
-        resolve("success2");
-    },4000); 
-});
+}
+// let promise2 = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         console.log("Data2 get");
+//         resolve("success2");
+//     },4000); 
+// });
 
-promise.then(()=>{
-    console.log("fetching data1........");
-    promise2.then(()=>{
-        console.log("Fetching data2........")
-     });
-});
+// promise.then(()=>{
+//     console.log("fetching data1........");
+//     promise2.then(()=>{
+//         console.log("Fetching data2........")
+//      });
+// });
+console.log("fetching data1...")
+getdata(1).then(()=>{
+    console.log("fetching data2...")
+    return getdata(2);
+}).then(()=>{
+    console.log("fetching 3...")
+    return getdata(3);
+}).then(()=>{});
