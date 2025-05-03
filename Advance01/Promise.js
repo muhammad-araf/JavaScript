@@ -1,10 +1,30 @@
-let prom = new Promise((resolve,reject)=>{
-    console.log("Getting Data");
-    resolve("Success");
-})
-prom.then((res)=>{
-    console.log("resolve with",res);
-})
-prom.catch((cat)=>{
-    console.log("Error with",err);
-})
+// let prom = new Promise((resolve,reject)=>{
+//     console.log("Getting Data");
+//     resolve("Success");
+// })
+// prom.then((res)=>{
+//     console.log("resolve with",res);
+// })
+// prom.catch((cat)=>{
+//     console.log("Error with",err);
+// })
+
+let promise = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        console.log("Data1 get");
+        resolve("success2");
+    },4000);
+});
+let promise2 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        console.log("Data2 get");
+        resolve("success2");
+    },4000); 
+});
+
+promise.then(()=>{
+    console.log("fetching data1........");
+    promise2.then(()=>{
+        console.log("Fetching data2........")
+     });
+});
