@@ -1,6 +1,6 @@
   body {
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to bottom right, #943efc, #e684ff);
+    background: #943efc;
     margin: 0;
     color: white;
     padding: 0;
@@ -55,6 +55,7 @@
 
   .message {
     max-width: 75%;
+    max-height: 100%;
     margin: 10px 0;
     padding: 12px 16px;
     border-radius: 20px;
@@ -114,7 +115,7 @@
     background: #f2ff00c5;
   }
 
-  @media screen and (max-width: 540px) {
+  /* @media screen and (max-width: 540px) {
     .chatbox {
       margin: 20px;
       width: calc(100% - 40px);
@@ -122,5 +123,5 @@
 
     .messages {
       height: 350px;
-    }
-  }
+    } 
+  } */
