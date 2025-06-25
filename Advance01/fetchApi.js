@@ -6,7 +6,7 @@
     //     console.log(res.login);
     // })
     // .catch((err)=>{
-    //     console.log("ancnaca");
+    //     console.log("Error Occured");
     // });
 let data;
 (async function getUserData() {
