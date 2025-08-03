@@ -20,10 +20,10 @@
 
     try {
 
-      const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      const res = await fetch(proces.env.URL, {
   method: "POST",
   headers: {
-    "Authorization": "Bearer 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",
+    "Authorization": process.env.KEY,
     "Content-Type": "application/json"
   },
   body: JSON.stringify({
